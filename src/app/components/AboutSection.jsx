@@ -9,13 +9,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Patar patar</li>
-        <li>kyau kyau</li>
-        <li>guff</li>
-        <li>hanna</li>
-        <li>aauxa</li>
-        <li>bolna</li>
-        <li>aauxa</li>
+        <li>Communication</li>
+        <li>Computer Expert</li>
+        <li>Editing</li>
+        <li>Teaching</li>
+        <li>Tutoring</li>
       </ul>
     ),
   },
@@ -25,7 +23,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Pokhara University, School of Engineering</li>
-        <li>Chorepatan Secondary School</li>
+        <li>Chhorepatan Secondary School</li>
       </ul>
     ),
   },
@@ -34,8 +32,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Guffadi of the year</li>
-        <li>Feri guffadi of the year</li>
+        <li>+2 Science</li>
+        <li>Bachelor running</li>
       </ul>
     ),
   },
@@ -63,11 +61,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a computer engineering student at Pokhara University. Lorem
-            ipsum, dolor sit amet consectetur adipisicing elit. Pariatur unde
-            ullam laboriosam sed magnam, distinctio debitis dolores illum,
-            voluptates nisi vitae suscipit harum odit enim nesciunt. Deserunt,
-            libero! Magni, alias.
+            I am a computer engineering student at Pokhara University.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
