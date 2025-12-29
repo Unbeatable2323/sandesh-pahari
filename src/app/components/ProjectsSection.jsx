@@ -74,6 +74,9 @@ const ProjectsSection = () => {
     project.tag.includes(tag)
   );
 
+  // Show only the first 4 projects for the section (UI requirement)
+  const visibleProjects = filteredProjects.slice(0, 4);
+
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -81,9 +84,15 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+        <h2 className="text-center md:text-left text-4xl font-bold text-white mt-4 mb-0">
+          My Projects
+        </h2>
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-[#ADB7BE]">Showing</span>
+          <span className="px-3 py-1 text-sm font-medium bg-[#121212] rounded-full text-white">{visibleProjects.length} of 4</span>
+        </div>
+      </div>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
@@ -101,14 +110,15 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+      <ul ref={ref} className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {visibleProjects.map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
+            className=""
           >
             <ProjectCard
               key={project.id}

@@ -9,11 +9,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Communication</li>
-        <li>Computer Expert</li>
-        <li>Editing</li>
+        <li>Python</li>
+        <li>Machine Learning</li>
+        <li>Data Analyst</li>
         <li>Teaching</li>
-        <li>Tutoring</li>
+        
       </ul>
     ),
   },
@@ -33,7 +33,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>+2 Science</li>
-        <li>Bachelor running</li>
+        <li>Bachelor in Computer Engineering</li>
       </ul>
     ),
   },
